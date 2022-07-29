@@ -1,0 +1,15 @@
+{
+  "name": "mango-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/singer0503/singer0503-singer0503.github.io.git",
+  "author": "Max Huang",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  }
+}

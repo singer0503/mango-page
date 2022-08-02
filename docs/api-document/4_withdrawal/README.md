@@ -12,9 +12,9 @@ POST https://mg4zz.com/api/withdrawal
 
 ### Parameters
 
-| Header                |                            |
-| --------------------- | -------------------------- |
-| Content-Type          | application/json           |
+| Header                |                                            |
+| --------------------- | --------------------------                 |
+| Content-Type          | **application/x-www-form-urlencoded**          |
 
 
 | Body Parameters       | Desc                               | Required | Type |

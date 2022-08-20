@@ -13,16 +13,16 @@ GET https://aac26.com/api/order/create
 | Content-Type          | multipart/form-data        |
 
 
-| Body Parameters       |Desc                               | Required | Type |
-| --------------------- | --------------------------        |-------  | -------   |
-| paymentMethod         | 收款类型：2=印度扫码, 7=銀行卡      | *       | string |
-| merchantNumber        | 商戶編號                           | *       | string |
-| merchantOrderNumber   | 商户订单号（商户唯一订单编号）       | *       | string |
-| requestedAmount       | 请求支付金额(元)                   | *       | string |
-| callbackUrl           | 回调接口地址                       | *       | string |
-| sign                  | 签名（请参考商家支付接口sign说明）   | *       | string |
-| customerRequestedIp   | 商户会员支付请求的IP地址            | *       | string |
-| paymentPlatform       | 1:PC端，2:移动端                   |         | string |
+| Body Parameters       |Desc                                      | Required | Type |
+| --------------------- | --------------------------               |-------  | -------   |
+| paymentMethod         | 收款类型：1=四方支付, 2=印度扫码, 7=銀行卡  | *       | string |
+| merchantNumber        | 商戶編號                                  | *       | string |
+| merchantOrderNumber   | 商户订单号（商户唯一订单编号）              | *       | string |
+| requestedAmount       | 请求支付金额(元)                          | *       | string |
+| callbackUrl           | 回调接口地址                              | *       | string |
+| sign                  | 签名（请参考商家支付接口sign说明）         | *       | string |
+| customerRequestedIp   | 商户会员支付请求的IP地址                   | *       | string |
+| paymentPlatform       | 1:PC端，2:移动端                          |         | string |
 | createType            | 传入1或2，1=支付平台进行跳转（请使用form表单进行提交跳转），2=返回URL商户自己跳转，为了兼容老接口，该参数不需要进行sign签名加密      | *       | string |
 
 ### Response

@@ -19,7 +19,7 @@ POST https://aac26.com/api/order/create
 
 | Body Parameters       |Desc                               | Required | Type |
 | --------------------- | --------------------------        |-------  | -------   |
-| paymentMethod         | 收款类型：2=印度扫码, 7=銀行卡      | *       | string |
+| paymentMethod         | 收款类型：1=四方支付, 2=印度扫码, 7=銀行卡      | *       | string |
 | merchantNumber        | 商戶編號                           | *       | string |
 | merchantOrderNumber   | 商户订单号（商户唯一订单编号）       | *       | string |
 | requestedAmount       | 请求支付金额(元)                   | *       | string |

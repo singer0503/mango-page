@@ -23,7 +23,7 @@ sign 签名认证，请参考“支付回调接口sign签名说明文档”
 | orderNumber           | string                            |平台交易流水编号                                         |
 | merchantOrderNumber   | string                            |平台交易流水编号                                         |
 | actualAmount          | string                            |到账金额                                                |
-| paymentMethod         | string                            |支付收款类型：2=印度扫码, 7=銀行卡     代付类型： 1=銀行卡 |
+| paymentMethod         | string                            |支付收款类型：1=四方支付, 2=印度扫码, 7=銀行卡             |
 | sign                  | string                            |签名认证，请参考“回调接口 sign 签名规则”                  |
 
 ### 返回示例 (Response Sample)

@@ -19,7 +19,8 @@ module.exports = {
             ['/api-document/1_deposit/1_deposit_func1.md','代收_方式一'],
             ['/api-document/1_deposit/2_deposit_func2.md','代收_方式二'],
             ['/api-document/1_deposit/3_deposit_callback.md','代收回调_商户接口说明'],
-            ['/api-document/2_withdrawal/1_withdrawal_func1.md', '提款代付'],
+            ['/api-document/2_withdrawal/1_withdrawal_bankcard.md', '提款代付_銀行卡'],
+            ['/api-document/2_withdrawal/2_withdrawal_UPI.md', '提款代付_UPI'],
             ['/api-document/2_withdrawal/3_withdrawal_callback.md','代付回调_商户接口说明'],
             ['/api-document/5_deposit_query/', '下单查询 (尚未开放 无法使用)'],
             ['/api-document/6_withdrawal_query/', '提款查询 (尚未开放 无法使用)'],
@@ -46,7 +47,7 @@ module.exports = {
           title: '其他说明',
           collapsable: false,
           children: [
-            ['/api-document/2_withdrawal/2_withdrawal_bankList.md', '提款银行列表'],
+            ['/api-document/2_withdrawal/4_withdrawal_bankList.md', '提款银行列表'],
           ]
         }
       ],

@@ -45,7 +45,7 @@ POST https://mg4zz.com/api/withdrawal
 | withdrawalMethod      | 1                                  |
 | paymentPlatform       | 1                                  |
 | requestedAmount       | 1000                               |
-| merchantKey           | 3CD49251A27E58CC3901A84474A6F126   |
+| merchantKey           | 3E44A7EC8F2A7F5A5E48491EAE9795FB   |
 | customerCardNumber    | 1231236046598712                   |
 | customerName          | 黄小明                             |
 | customerOpeningBank   |                                    |

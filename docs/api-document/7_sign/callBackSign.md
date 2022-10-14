@@ -8,6 +8,6 @@
 ### 示例：
 商户密钥 (merchantKey) ,请登录商户后台查看。
 ```
-actualAmount=500.00&code=S00&merchantOrderNumber=B19080915543241028330&message=支付成功&orderNumber=B19080915543241028330&paymentMethod=1&merchantKey=1234567890)
+actualAmount=500.00&code=S00&merchantOrderNumber=B19080915543241028330&message=支付成功&orderNumber=B19080915543241028330&paymentMethod=1&merchantKey=1234567890
 ```
-sign 加密结果: 08292AFF6D3DDF835FC101340318CCCF
+以 MD5 Hash 轉大写结果: 08292AFF6D3DDF835FC101340318CCCF

@@ -48,8 +48,8 @@ POST https://mg4zz.com/api/withdrawal
 | merchantKey           | 3E44A7EC8F2A7F5A5E48491EAE9795FB   |
 | customerCardNumber    | 1231236046598712                   |
 | customerName          | 黄小明                             |
-| customerOpeningBank   |                                    |
-| customerBankType      | Bandhan Bank                       |
+| customerOpeningBank   | Indian Bank                        |
+| customerBankType      | Indian Bank                        |
 | sign                  | 请参考下单sign签名规则              |
 
 ```

@@ -29,7 +29,7 @@ POST https://mg4zz.com/api/withdrawal
 | merchantKey           | 接口密钥                            |          | string |
 | customerCardNumber    | 银行卡号                            |         | string |
 | customerName          | 银行卡姓名                          | *        | string |
-| customerOpeningBank   | 支行名称                            | *        | string |
+| customerOpeningBank   | IFSC Code 或 支行名称               | *        | string |
 | customerBankType      | 银行：请参考提款银行列表             | *        | string |
 | sign                  | 签名                                | *        | string |
 
@@ -48,7 +48,7 @@ POST https://mg4zz.com/api/withdrawal
 | merchantKey           | 3E44A7EC8F2A7F5A5E48491EAE9795FB   |
 | customerCardNumber    | 1231236046598712                   |
 | customerName          | 黄小明                             |
-| customerOpeningBank   | Indian Bank                        |
+| customerOpeningBank   | HDFC0009350                        |
 | customerBankType      | Indian Bank                        |
 | sign                  | 请参考下单sign签名规则              |
 

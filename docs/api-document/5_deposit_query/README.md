@@ -1,9 +1,9 @@
-# 下单查询 (尚未开放 无法使用)
+# 下单查询 
 
 ### Endpoint
 
 ```
-GET https://aac27.com/api/depositquery
+GET http://104.208.75.189:59833/api/depositquery
 ```
 
 ### Request Parameters
@@ -15,28 +15,80 @@ GET https://aac27.com/api/depositquery
 
 | URL Parameters        |Desc                                     |Required |
 | --------------------- | --------------------------              |-------  |
-| systemOrderNumber     | 系统订单号 (与商户订单号至少传入一个)      |         |
-| merchantOrderNumber   | 商户订单号 (与系统订单号至少传入一个)      |         |
+| systemOrderNumber     | 系统订单号 (与商户订单号至少传入一个)     |         |
+| merchantOrderNumber   | 商户订单号 (与系统订单号至少传入一个)     |         |
 | merchantNumber        | 商户编号                                 | *       |
-| paymentMethod         | 2 = 印度扫码                             | *       |
+| paymentMethod         | 1=四方支付, 2=印度扫码, 7=銀行卡          | *       |
 | sign                  | 签名认证                                 | *       |
 
 ::: tip 
 系统订单号与商户订单号至少传入一个
 :::
 
+### 签名方法
+
+1. 参数列表中，除去 sign 参数外，其他所有参数都要参与签名。 
+2. 参与签名的参数顺序按照首字母从小到大（a 到 z）的顺序排列， 如果遇到相同首字母则按第二个字母
+3. 从小到大的顺序排列，以此类推。如果参数值为空则不参与签名，merchantKey参数追加到所有参数最后。 4、 签名以 MD5 32位大写加密。
+
+### 參與簽名範例
+参与签名的参数有：merchantNumber、merchantOrderNumber、systemOrderNumber、paymentMethod、merchantKey
+```
+merchantNumber=19999&merchantOrderNumber=tOrder202210170001&paymentMethod=2&merchantKey=128B3002766A60A8E84FAF1559123456
+```
+
+以 MD5 Hash 后转大写结果：
+6C376246210819AFC146B8ECE58C9A39
+
+將 MD5 Hash 放入 sign 內，使用 GET 進行查詢：
 ### Request Sample
-
 ```
-https://aac27.com/api/depositquery?systemOrderNumber=19120314514474593458&merchantOrderNumber=B19120314514126661195&merchantNumber=10001&paymentMethod=1&sign=3A4B004088274603B592C8F9A82008AD
+http://104.208.75.189:59833/api/depositquery?merchantNumber=19999&merchantOrderNumber=tOrder202210170001&paymentMethod=2&&sign=6C376246210819AFC146B8ECE58C9A39
 ```
 
-### Response
+### Response Sample
 
-请求成功
+请求成功，已完成，回调成功的单
 ```json
 Status Code: 200 OK
+{
+    "code": "S00",
+    "message": "获取成功",
+    "data": {
+        "systemOrderNumber": "22101507193002094039",
+        "merchantOrderNumber": "tOrder202210170001",
+        "status": 1,
+        "callbackNoticeStatus": 1,
+        "requestedAmount": 440.0,
+        "actualAmount": 440.0,
+        "createdAt": "2022-10-15T07:19:30.1171782+05:30",
+        "completedAt": "2022-10-15T07:31:55.9744644+05:30"
+    }
+}
+```
 
+请求成功，逾期，超时未付款的单
+```json
+Status Code: 200 OK
+{
+    "code": "S00",
+    "message": "获取成功",
+    "data": {
+        "systemOrderNumber": "22101507534006448107",
+        "merchantOrderNumber": "E2F57FFDBC914417E5C47020A88692C3",
+        "status": 0,
+        "callbackNoticeStatus": 0,
+        "requestedAmount": 100.0,
+        "actualAmount": 0.0,
+        "createdAt": "2022-10-15T07:53:40.5986122+05:30",
+        "completedAt": "2022-10-15T08:08:52.8934278+05:30"
+    }
+}
+```
+
+请求成功，下单尚未支付
+```json
+Status Code: 200 OK
 {
     "code": "S00",
     "message": "获取成功",
@@ -53,14 +105,23 @@ Status Code: 200 OK
 }
 ```
 
-请求失败
+
+
+
+请求失败:参数错误 / 签名错误
 ```json
 Status Code: 404 Not Found
-
 {
     "code": "E00",
     "message": "商户参数错误",
     "data": null
+}
+
+签名错误
+{
+    "code":"E00",
+    "message":"签名错误，请检查参数顺序或KEY是否正确",
+    "data":null
 }
 ```
 
@@ -78,8 +139,3 @@ Status Code: 404 Not Found
 | createdAt             | string                                  | 订单创建日期                                          |
 | completedAt           | string                                  | 订单完结日期                                          |
 
-### 签名方法
-
-1. 参数列表中，除去 sign 参数外，其他所有参数都要参与签名。 
-2. 参与签名的参数顺序按照首字母从小到大（a 到 z）的顺序排列， 如果遇到相同首字母则按第二个字母
-3. 从小到大的顺序排列，以此类推。如果参数值为空则不参与签名，merchantKey参数追加到所有参数最后。 4、 签名以 MD5 32位大写加密。

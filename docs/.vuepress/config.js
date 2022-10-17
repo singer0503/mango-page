@@ -22,7 +22,7 @@ module.exports = {
             ['/api-document/2_withdrawal/1_withdrawal_bankcard.md', '提款代付_銀行卡'],
             ['/api-document/2_withdrawal/2_withdrawal_UPI.md', '提款代付_UPI'],
             ['/api-document/2_withdrawal/3_withdrawal_callback.md','代付回调_商户接口说明'],
-            ['/api-document/5_deposit_query/', '下单查询 (尚未开放 无法使用)'],
+            ['/api-document/5_deposit_query/', '下单查询'],
             ['/api-document/6_withdrawal_query/', '提款查询 (尚未开放 无法使用)'],
           ]
         },

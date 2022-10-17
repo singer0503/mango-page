@@ -17,7 +17,7 @@ module.exports = {
           collapsable: false,
           children: [
             ['/api-document/1_deposit/1_deposit_func1.md','代收_方式一'],
-            ['/api-document/1_deposit/2_deposit_func2.md','代收_方式二'],
+            // ['/api-document/1_deposit/2_deposit_func2.md','代收_方式二'], // 避免混淆，把代收方式二隐藏
             ['/api-document/1_deposit/3_deposit_callback.md','代收回调_商户接口说明'],
             ['/api-document/2_withdrawal/1_withdrawal_bankcard.md', '提款代付_銀行卡'],
             ['/api-document/2_withdrawal/2_withdrawal_UPI.md', '提款代付_UPI'],
@@ -44,10 +44,11 @@ module.exports = {
           ]
         },
         {
-          title: '其他说明',
+          title: '银行列表说明',
           collapsable: false,
           children: [
-            ['/api-document/2_withdrawal/4_withdrawal_bankList.md', '提款银行列表'],
+            ['/api-document/9_bankList/1_bankList_india.md', '银行列表 (印度 India)'],
+            ['/api-document/9_bankList/2_bankList_vietnam.md', '银行列表 (越南 Vietnam) '],
           ]
         }
       ],

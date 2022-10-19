@@ -1,4 +1,4 @@
-# 提款代付 
+# 提款代付_銀行卡
 
 ::: tip
 可请商务提出需要 API 测试集成范例，芒果支付提供 postman 的汇入档，缩短您的开发时间
@@ -31,14 +31,14 @@ POST https://mg4zz.com/api/withdrawal
 | customerName          | 银行卡姓名                          | *        | string |
 | customerOpeningBank   | IFSC Code 或 支行名称               | *        | string |
 | customerBankType      | 银行：请参考提款银行列表             | *        | string |
-| sign                  | 签名                                | *        | string |
+| sign                  | 签名 (请参考代收/提款 sign 签名规则) | *        | string |
 
 ### Request Example
 
 ```bash
 | Key                   | Value                              |
 | --------------------- | --------------------------         |
-| callbackUrl           | http://www.google.com              |
+| callbackUrl           | http://www.google.com/callback     |
 | customerRequestedIp   | 52.229.159.160                     |
 | merchantNumber        | 10001                              |
 | merchantOrderNumber   | B20220801001                       |

@@ -16,21 +16,21 @@ module.exports = {
           title: '对接接口',
           collapsable: false,
           children: [
-            ['/api-document/1_deposit/1_deposit_func1.md','代收通道'],
+            ['/api-document/1_deposit/1_deposit_func1.md','代收'],
             // ['/api-document/1_deposit/2_deposit_func2.md','代收_方式二'], // 避免混淆，把代收方式二隐藏
             ['/api-document/1_deposit/3_deposit_callback.md','代收回调_商户接口说明'],
             ['/api-document/2_withdrawal/1_withdrawal_bankcard.md', '提款代付_銀行卡'],
             ['/api-document/2_withdrawal/2_withdrawal_UPI.md', '提款代付_UPI'],
-            ['/api-document/2_withdrawal/3_withdrawal_callback.md','代付回调_商户接口说明'],
-            ['/api-document/5_deposit_query/', '下单查询'],
-            ['/api-document/6_withdrawal_query/', '提款查询 (尚未开放 无法使用)'],
+            ['/api-document/2_withdrawal/3_withdrawal_callback.md','提款代付回调_商户接口说明'],
+            ['/api-document/5_deposit_query/', '代收查询'],
+            ['/api-document/6_withdrawal_query/', '提款代付查询 (尚未开放 无法使用)'],
           ]
         },
         {
           title: 'SIGN 签名说明',
           collapsable: false,
           children: [
-            ['/api-document/7_sign/orderSign.md', '下单 sign 签名规则'],
+            ['/api-document/7_sign/orderSign.md', '代收/提款 sign 签名规则'],
             ['/api-document/7_sign/callBackSign.md', '回调接口 sign 签名规则']
           ]
         },

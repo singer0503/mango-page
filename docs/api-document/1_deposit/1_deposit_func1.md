@@ -1,4 +1,4 @@
-# 代收通道
+# 代收
 
 ::: tip
 可请商务提出需要 API 测试集成范例，芒果支付提供 postman 的汇入档，缩短您的开发时间
@@ -24,7 +24,7 @@ POST https://aac26.com/api/order/create
 | merchantOrderNumber   | 商户订单号（商户唯一订单编号）       | *       | string |
 | requestedAmount       | 请求支付金额(元)                   | *       | string |
 | callbackUrl           | 回调接口地址                       | *       | string |
-| sign                  | 签名（请参考商家支付接口sign说明）   | *       | string |
+| sign                  | 签名（请参考代收/提款 sign 签名规则）   | *       | string |
 | customerRequestedIp   | 商户会员支付请求的IP地址            | *       | string |
 | paymentPlatform       | 1:PC端，2:移动端                   |         | string |
 | createType            | 传入1或2，1=支付平台进行跳转（请使用form表单进行提交跳转），2=返回URL商户自己跳转，为了兼容老接口，该参数不需要进行sign签名加密      | *       | string |

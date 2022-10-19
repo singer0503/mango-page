@@ -3,7 +3,7 @@
 ### Endpoint
 
 ```
-GET http://104.208.75.189:59833/api/depositquery
+GET https://mg6956.com/api/depositquery
 ```
 
 ### Request Parameters

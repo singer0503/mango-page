@@ -3,7 +3,7 @@
 ### Endpoint
 
 ```
-GET https://aac27.com/api/withdrawalquery
+GET https://mg6956.com/api/withdrawalquery
 ```
 
 ### Request Parameters

@@ -8,17 +8,12 @@ GET https://mg6956.com/api/depositquery
 
 ### Request Parameters
 
-| Header                |                            |
-| --------------------- | -------------------------- |
-| Content-Type          | multipart/form-data        |
-
-
-| URL Parameters        |Desc                                     |Required |
+| URL Parameters        | Desc                                    |Required |
 | --------------------- | --------------------------              |-------  |
 | systemOrderNumber     | 系统订单号 (与商户订单号至少传入一个)     |         |
 | merchantOrderNumber   | 商户订单号 (与系统订单号至少传入一个)     |         |
 | merchantNumber        | 商户编号                                 | *       |
-| paymentMethod         | 1=四方支付, 2=印度扫码, 7=銀行卡          | *       |
+| paymentMethod         | 1=四方支付, 2=印度扫码, 7=銀行卡          | *      |
 | sign                  | 签名认证                                 | *       |
 
 ::: tip 

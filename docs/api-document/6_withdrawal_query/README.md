@@ -8,11 +8,6 @@ GET https://mg6956.com/api/withdrawalquery
 
 ### Request Parameters
 
-| Header                |                            |
-| --------------------- | -------------------------- |
-| Content-Type          | multipart/form-data        |
-
-
 | URL Parameters        |Desc                                     |Required |
 | --------------------- | --------------------------              |-------  |
 | systemOrderNumber     | 系统订单号 (与商户订单号至少传入一个)      |         |

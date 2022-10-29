@@ -49,6 +49,7 @@ module.exports = {
           children: [
             ['/api-document/9_bankList/1_bankList_india.md', '银行列表 (印度 India)'],
             ['/api-document/9_bankList/2_bankList_vietnam.md', '银行列表 (越南 Vietnam) '],
+            ['/api-document/9_bankList/3_bankList_thailand.md', '银行列表 (泰国 Thailand) '],
           ]
         }
       ],
